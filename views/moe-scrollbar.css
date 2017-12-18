@@ -1,0 +1,28 @@
+
+
+.CodeMirror-vscrollbar {
+    width: 6px;
+    overflow-y: hidden !important;
+}
+
+.CodeMirror-vscrollbar:hover {
+    overflow-y: scroll !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: none;
+}
+
+::-webkit-scrollbar {
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b8b8b8;
+}

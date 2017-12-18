@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <base href="../href.html">
+        <title>About Prometeus</title>
+
+		<script>
+		window.$ = window.jQuery = require("jquery");
+        window.document.querySelector('html').classList.add(process.platform);
+        window.moeApp = require('electron').remote.app.moeApp;
+        window.localized = [() => { require('electron').remote.getCurrentWindow().show(); }]
+        </script>
+
+        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="about/moe-about.css">
+        <link rel="stylesheet" href="fonts/moe-fonts.css">
+
+        <script type="text/javascript" src="moe-localize.js"></script>
+    </head>
+    <body>
+        <div id="electron-titlebar" class="drag inset" style="position: fixed; "></div>
+        <div id="main">
+            <div id="logo">
+                <div id="logo-name">ABOUT</div>
+                <div id="logo-author"> For more information support and contributors visit <a href=""> </a></div>
+            </div>
+            <div id="description">Your you need in a markdown editor.</div>
+            <div id="version">
+            <span class="l10n">version</span> <script>
+            document.write(require('../../package.json').version);
+            </script>
+            </div>
+            <div id="links">
+            </div>
+        </div>
+        <script>
+        require('electron-titlebar');
+        const s = require('electron').shell;
+        const links = document.querySelectorAll('a');
+        for (let a of links) {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (a.href) s.openExternal(a.href);
+            });
+        }
+        </script>
+    </body>
+</html>
