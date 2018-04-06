@@ -20,6 +20,10 @@ My goal is to create a store where each developer can create their own sites and
 To do this you need funds and capable people.
 Every kind of help is welcome. Thanks
 
+# Support 
+
+<a href='https://ko-fi.com/B0B0B0KN'>Buy Me a Coffee</a>
+
 # Screenshots
 
 
